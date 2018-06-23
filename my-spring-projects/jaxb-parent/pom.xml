@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.vishnu</groupId>
+    <artifactId>maven-parent-modules</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>jaxb-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Vishnu - jaxb</name>
+  <description>Vishnu - jaxb</description>
+
+  <modules>
+    <module>jaxb-marshall</module>
+    <module>jaxb-unmarshall</module>
+  </modules>
+
+  <properties>
+	<file.encoding>UTF-8</file.encoding>  
+    <junit.version>4.12</junit.version>
+    <jackson.version>2.9.6</jackson.version>
+    <jaxb.version>2.2.11</jaxb.version>
+	<jaxb2-basics.version>1.11.1</jaxb2-basics.version>
+	<jaxb2-maven-plugin.version>2.3</jaxb2-maven-plugin.version>
+    <joda.version>2.10</joda.version>
+    <commons-io.version>2.6</commons-io.version>
+    <commons-configuration.version>1.10</commons-configuration.version>
+    <commons-lang3.version>3.7</commons-lang3.version>
+	<lifecycle-mapping-plugin.version>1.0.0</lifecycle-mapping-plugin.version>    
+    <logback.version>1.2.3</logback.version>
+    <lombok.version>1.18.0</lombok.version>
+    <servlet-api.version>2.4</servlet-api.version>
+    <servlet-api-test.version>3.0.1</servlet-api-test.version>
+    <slf4j.version>1.7.25</slf4j.version>
+    <spring-framework.version>4.3.16.RELEASE</spring-framework.version>
+  </properties>
+</project>  

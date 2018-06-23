@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.vishnu</groupId>
+	<artifactId>maven-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>maven-parent</name>
+	<description>parent pom for all maven</description>
+	<!-- <scm> <url>https://github.com/Vishnuprakash82/parent</url> <connection>scm:git:https://github.com/Vishnuprakash82/parent</connection> 
+		<tag>HEAD</tag> </scm> <properties> <java.version>1.8</java.version> <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> 
+		</properties> -->
+
+	<properties>
+		<maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
+		<maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+		<maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
+		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+		<maven-compiler-source.version>1.8</maven-compiler-source.version>
+		<maven-compiler-target.version>1.8</maven-compiler-target.version>
+		<maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
+		<maven-dependency-plugin.version>3.0.2</maven-dependency-plugin.version>
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+		<maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
+		<maven-ejb-plugin.version>3.0.0</maven-ejb-plugin.version>
+		<maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
+		<maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+		<maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+		<maven-jxr-plugin.version>2.5</maven-jxr-plugin.version>
+		<maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
+		<maven-project-info-reports-plugin.version>2.9</maven-project-info-reports-plugin.version>
+		<maven-release-plugin.version>2.5.3 </maven-release-plugin.version>
+		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+		<maven-site-plugin.version>3.6</maven-site-plugin.version>
+		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+		<maven-war-plugin.version>3.2.0</maven-war-plugin.version>
+		<dependency-check-maven.version>3.0.2</dependency-check-maven.version>
+		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
+		<findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
+		<git-commit-id-plugin.version>2.2.3</git-commit-id-plugin.version>
+		<jacoco-maven-plugin.version>0.8.1</jacoco-maven-plugin.version>
+		<jaxb2-maven-plugin.version>2.3.1</jaxb2-maven-plugin.version>
+		<project-build-sourceEncoding.version>UTF-8</project-build-sourceEncoding.version>
+		<project-reporting-outputEncoding.version>UTF-8</project-reporting-outputEncoding.version>
+		<taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
+		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
+		<versions-maven-plugin.version>2.5</versions-maven-plugin.version>
+		<wro4j-maven-plugin.version>1.8.0</wro4j-maven-plugin.version>
+
+		<doxia-module-markdown.version>1.8</doxia-module-markdown.version>
+		<joda-time.version>2.9.2</joda-time.version>
+				<!-- Testing -->		
+		<junit.version>4.12</junit.version>
+		<hamcrest.version>1.3</hamcrest.version>
+		<mockito.version>2.8.9</mockito.version>
+		<junit-jupiter-engine.version>5.0.2</junit-jupiter-engine.version>		
+				<!-- logging -->
+		<slf4j-api.version>1.7.21</slf4j-api.version>
+		<logback.version>1.1.7</logback.version>
+		<log4j.version>1.2.17</log4j.version>
+	</properties>
+
+
+	<dependencies>
+		<!-- logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j-api.version}</version>
+		</dependency>
+
+		<!-- test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit-jupiter-engine.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven-clean-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${maven-release-plugin.version}</version>
+					<configuration>
+						<pushChanges>false</pushChanges>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>${maven-antrun-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven-assembly-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven-dependency-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>${maven-compiler-source.version}</source>
+						<target>${maven-compiler-target.version>}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${maven-install-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${maven-deploy-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${maven-javadoc-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${maven-source-plugin.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxb2-maven-plugin</artifactId>
+					<version>${jaxb2-maven-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>${tomcat7-maven-plugin.version}</version>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>copy-resources</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>validate</phase>
+							<configuration>
+								<outputDirectory>${basedir}/target/classes/resources</outputDirectory>
+								<resources>
+									<resource>
+										<directory>src/main/webapp/resources</directory>
+										<includes>
+											<include>**/*.css</include>
+											<include>**/*.svg</include>
+										</includes>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<!-- <manifestEntries> <Implementation-Build>${git.commit.id.abbrev}</Implementation-Build> 
+								<Built-Date>${git.build.time}</Built-Date> <Commit-Id>${git.commit.id}</Commit-Id> 
+								</manifestEntries> -->
+						</archive>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${maven-war-plugin.version}</version>
+					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+						<archive>
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<!-- <manifestEntries> <WebLogic-Application-Version>${project.version}</WebLogic-Application-Version> 
+								<Implementation-Build>${git.commit.id.abbrev}</Implementation-Build> <Built-Date>${git.build.time}</Built-Date> 
+								<Commit-Id>${git.commit.id}</Commit-Id> </manifestEntries> -->
+						</archive>
+						<webResources>
+							<resource>
+								<directory>target/generated-sources</directory>
+								<include>WEB-INF/jboss-deployment-structure.xml</include>
+							</resource>
+						</webResources>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${maven-ear-plugin.version}</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<WebLogic-Application-Version>${project.version}</WebLogic-Application-Version>
+								<Implementation-Build>${git.commit.id.abbrev}</Implementation-Build>
+								<Built-Date>${git.build.time}</Built-Date>
+								<Commit-Id>${git.commit.id}</Commit-Id>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>${maven-ejb-plugin.version}</version>
+				</plugin>
+
+				<!-- <plugin> <groupId>ro.isdc.wro4j</groupId> <artifactId>wro4j-maven-plugin</artifactId> 
+					<version>${wro4j-maven-plugin.version}</version> <configuration> <minimize>true</minimize> 
+					<ignoreMissingResources>false</ignoreMissingResources> <cssDestinationFolder>${basedir}/src/main/webapp/resources/css/bundle</cssDestinationFolder> 
+					<jsDestinationFolder>${basedir}/src/main/webapp/resources/js/bundle</jsDestinationFolder> 
+					<wroManagerFactory>ch.migrosbank.web.maven.plugin.wro4j.WebAppWroManagerFactory</wroManagerFactory> 
+					</configuration> <executions> <execution> <goals> <goal>run</goal> </goals> 
+					<phase>compile</phase> </execution> </executions> </plugin> -->
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>${maven-pmd-plugin.version}</version>
+					<configuration>
+						<failurePriority>5</failurePriority>
+						<aggregate>false</aggregate>
+						<failOnViolation>true</failOnViolation>
+						<verbose>true</verbose>
+						<linkXRef>true</linkXRef>
+						<includeTests>true</includeTests>
+						<sourceEncoding>UTF-8</sourceEncoding>
+						<targetJdk>1.8</targetJdk>
+					</configuration>
+					<executions>
+						<execution>
+							<phase>compile</phase>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<!-- <plugin> <groupId>pl.project13.maven</groupId> <artifactId>git-commit-id-plugin</artifactId> 
+				<version>${git-commit-id-plugin.version}</version> <configuration> <dotGitDirectory>${project.basedir}/.git</dotGitDirectory> 
+				<generateGitPropertiesFile>false</generateGitPropertiesFile> <skipPoms>false</skipPoms> 
+				<abbrevLength>8</abbrevLength> <runOnlyOnce>false</runOnlyOnce> <excludeProperties> 
+				<excludeProperty>git.remote.*</excludeProperty> <excludeProperty>.*user.*</excludeProperty> 
+				</excludeProperties> </configuration> <executions> <execution> <goals> <goal>revision</goal> 
+				</goals> </execution> </executions> </plugin> <plugin> <artifactId>maven-site-plugin</artifactId> 
+				<configuration> <locales>en</locales> </configuration> <dependencies> <dependency> 
+				<groupId>org.apache.maven.doxia</groupId> <artifactId>doxia-module-markdown</artifactId> 
+				<version>${doxia-module-markdown.version}</version> </dependency> <dependency> 
+				<groupId>log4j</groupId> <artifactId>log4j</artifactId> <version>${log4j.version}</version> 
+				</dependency> </dependencies> <executions> <execution> <id>attach-descriptor</id> 
+				<goals> <goal>attach-descriptor</goal> </goals> </execution> </executions> 
+				</plugin> -->
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven-plugin.version}</version>
+				<configuration>
+					<append>true</append>
+				</configuration>
+				<executions>
+					<execution>
+						<id>agent-for-unittests</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${maven-surefire-report-plugin.version}</version>
+				<configuration>
+					<outputDirectory>${project.reporting.outputDirectory}/testresults</outputDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${maven-javadoc-plugin.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${maven-checkstyle-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>${maven-project-info-reports-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>${findbugs-maven-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>${dependency-check-maven.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>${versions-maven-plugin.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+				<version>${taglist-maven-plugin.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>${maven-jxr-plugin.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven-pmd-plugin.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+					<!-- The minimum tokens before a violation -->
+					<minimumTokens>100</minimumTokens>
+					<!-- Turn off if no xref report -->
+					<linkXRef>true</linkXRef>
+					<verbose>true</verbose>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

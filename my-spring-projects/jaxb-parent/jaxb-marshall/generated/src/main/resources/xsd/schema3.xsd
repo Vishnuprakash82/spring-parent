@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+
+  <xs:complexType name="dateAdapter">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CreateProductRequest">
+    <xs:annotation>
+      <xs:documentation><![CDATA[<p>Java class for CreateProductRequest complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="CreateProductRequest"&gt;
+  &lt;complexContent&gt;
+    &lt;extension base="{}Product"&gt;
+      &lt;attribute name="apikey" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+    &lt;/extension&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</pre>]]></xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Product">
+        <xs:sequence/>
+        <xs:attribute name="apikey" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Product">
+    <xs:annotation>
+      <xs:documentation><![CDATA[<p>Java class for Product complex type.
+<p>The following schema fragment specifies the expected content contained within this class.
+<pre>
+&lt;complexType name="Product"&gt;
+  &lt;complexContent&gt;
+    &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+      &lt;sequence&gt;
+        &lt;element name="productId" type="{http://www.w3.org/2001/XMLSchema}integer"/&gt;
+        &lt;element name="productDescription" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+        &lt;element name="productPrice" type="{http://www.w3.org/2001/XMLSchema}decimal"/&gt;
+      &lt;/sequence&gt;
+    &lt;/restriction&gt;
+  &lt;/complexContent&gt;
+&lt;/complexType&gt;
+</pre>]]></xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="productId" type="xs:integer"/>
+      <xs:element name="productDescription" type="xs:string"/>
+      <xs:element name="productPrice" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Vishnu - jaxb - unmarshalling xml To java
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: drvp1982
+Built-Date: 
+Implementation-Build: 
+Implementation-Vendor-Id: com.vishnu
+Commit-Id: 
+Build-Jdk: 1.8.0_172
+Created-By: Maven Integration for Eclipse
+

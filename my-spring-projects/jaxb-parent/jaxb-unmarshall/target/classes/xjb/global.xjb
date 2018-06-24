@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings 
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               version="2.1">
+
+    <jaxb:globalBindings>
+    	<jaxb:serializable uid="1"/>
+        <!-- date time adapter -->
+        <jaxb:javaType name="org.joda.time.LocalDate" xmlType="xs:date" parseMethod="com.vishnu.jaxb.unmarshall.bindings.utils.DateAdapter.unmarshallDate" printMethod="com.vishnu.jaxb.unmarshall.bindings.utils.DateAdapter.marshallDate" />
+		<jaxb:javaType name="org.joda.time.DateTime" xmlType="xs:dateTime" parseMethod="com.vishnu.jaxb.unmarshall.bindings.utils.DateAdapter.unmarshallDateTime" printMethod="com.vishnu.jaxb.unmarshall.bindings.utils.DateAdapter.marshallDateTime" />
+    </jaxb:globalBindings>
+
+</jaxb:bindings>

@@ -1,23 +1,20 @@
 
 package org.w3._2001.xmlschema;
 
-import java.util.Calendar;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
+import org.joda.time.DateTime;
 
 public class Adapter1
-    extends XmlAdapter<String, Calendar>
+    extends XmlAdapter<String, DateTime>
 {
 
 
-    public Calendar unmarshal(String value) {
-        return (javax.xml.bind.DatatypeConverter.parseDateTime(value));
+    public DateTime unmarshal(String value) {
+        return (com.vishnu.jaxb.marshall.bindings.utils.DateAdapter.unmarshallDateTime(value));
     }
 
-    public String marshal(Calendar value) {
-        if (value == null) {
-            return null;
-        }
-        return (javax.xml.bind.DatatypeConverter.printDateTime(value));
+    public String marshal(DateTime value) {
+        return (com.vishnu.jaxb.marshall.bindings.utils.DateAdapter.marshallDateTime(value));
     }
 
 }

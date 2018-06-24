@@ -1,0 +1,14 @@
+com\vishnu\jaxb\marshall\product\Product.class
+com\vishnu\jaxb\marshall\course\package-info.class
+com\vishnu\jaxb\marshall\user\package-info.class
+com\vishnu\jaxb\marshall\course\CourseRequest.class
+com\vishnu\jaxb\marshall\course\ObjectFactory.class
+com\vishnu\jaxb\marshall\user\ObjectFactory.class
+com\vishnu\jaxb\marshall\user\UserResponse.class
+com\vishnu\jaxb\marshall\product\CreateProductRequest.class
+com\vishnu\jaxb\marshall\user\UserRequest.class
+org\w3\_2001\xmlschema\Adapter2.class
+com\vishnu\jaxb\marshall\product\ObjectFactory.class
+com\vishnu\jaxb\marshall\course\CourseResponse.class
+org\w3\_2001\xmlschema\Adapter1.class
+com\vishnu\jaxb\marshall\bindings\utils\DateAdapter.class

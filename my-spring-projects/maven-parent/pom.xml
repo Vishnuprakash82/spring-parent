@@ -300,14 +300,6 @@
 					<version>${maven-ejb-plugin.version}</version>
 				</plugin>
 
-				<!-- <plugin> <groupId>ro.isdc.wro4j</groupId> <artifactId>wro4j-maven-plugin</artifactId> 
-					<version>${wro4j-maven-plugin.version}</version> <configuration> <minimize>true</minimize> 
-					<ignoreMissingResources>false</ignoreMissingResources> <cssDestinationFolder>${basedir}/src/main/webapp/resources/css/bundle</cssDestinationFolder> 
-					<jsDestinationFolder>${basedir}/src/main/webapp/resources/js/bundle</jsDestinationFolder> 
-					<wroManagerFactory>ch.migrosbank.web.maven.plugin.wro4j.WebAppWroManagerFactory</wroManagerFactory> 
-					</configuration> <executions> <execution> <goals> <goal>run</goal> </goals> 
-					<phase>compile</phase> </execution> </executions> </plugin> -->
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-pmd-plugin</artifactId>

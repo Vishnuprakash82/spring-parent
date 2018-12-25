@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.0.1" timestamp="2018-06-24T23:33:36.594">
+<pmd version="5.6.1" timestamp="2018-06-28T00:14:29.161">
 <file name="D:\MyWorkspace\git\git-spring\my-spring-projects\jaxb-parent\jaxb-marshall\src\main\java\org\w3\_2001\xmlschema\Adapter1.java">
-<violation beginline="13" endline="13" begincolumn="17" endcolumn="93" rule="UselessParentheses" ruleset="Code Style" package="org.w3._2001.xmlschema" class="Adapter1" method="unmarshal" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="93" rule="UselessParentheses" ruleset="Unnecessary" package="org.w3._2001.xmlschema" class="Adapter1" method="unmarshal" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="17" endline="17" begincolumn="17" endcolumn="91" rule="UselessParentheses" ruleset="Code Style" package="org.w3._2001.xmlschema" class="Adapter1" method="marshal" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="17" endline="17" begincolumn="17" endcolumn="91" rule="UselessParentheses" ruleset="Unnecessary" package="org.w3._2001.xmlschema" class="Adapter1" method="marshal" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
 Useless parentheses.
 </violation>
 </file>
 <file name="D:\MyWorkspace\git\git-spring\my-spring-projects\jaxb-parent\jaxb-marshall\src\main\java\org\w3\_2001\xmlschema\Adapter2.java">
-<violation beginline="13" endline="13" begincolumn="17" endcolumn="89" rule="UselessParentheses" ruleset="Code Style" package="org.w3._2001.xmlschema" class="Adapter2" method="unmarshal" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="89" rule="UselessParentheses" ruleset="Unnecessary" package="org.w3._2001.xmlschema" class="Adapter2" method="unmarshal" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="17" endline="17" begincolumn="17" endcolumn="87" rule="UselessParentheses" ruleset="Code Style" package="org.w3._2001.xmlschema" class="Adapter2" method="marshal" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="17" endline="17" begincolumn="17" endcolumn="87" rule="UselessParentheses" ruleset="Unnecessary" package="org.w3._2001.xmlschema" class="Adapter2" method="marshal" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unnecessary.html#UselessParentheses" priority="4">
 Useless parentheses.
 </violation>
 </file>
